@@ -1,0 +1,29 @@
+.center-con .typing-text {
+    color: #4FACF7;
+    font-size: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid #18afdd;
+    animation: typing 1s steps(30, end), blink-caret 0.75s step-end infinite;
+    position: absolute;
+    margin-top: 70px;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 10%;
+    }
+  }
+
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: #20b1f5;
+    }
+  }

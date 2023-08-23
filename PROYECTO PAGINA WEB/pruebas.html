@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<style>
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .social-icon {
+    font-size: 24px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .social-icon:hover {
+    transform: scale(1.2);
+  }
+</style>
+<title>Compartir en Redes Sociales</title>
+</head>
+<body>
+  <div class="social-icons">
+    <i class="fab fa-google social-icon" onclick="shareOnFacebook()"></i>
+    <i class="fab fa-instagram social-icon" onclick="shareOnInstagram()"></i>
+  </div>
+
+  <script>
+    function shareOnFacebook() {
+      window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href));
+    }
+
+    function shareOnTwitter() {
+      window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(window.location.href));
+    }
+
+    function shareOnInstagram() {
+      alert('Instagram no admite compartir desde enlaces web.');
+    }
+  </script>
+</body>
+</html>
